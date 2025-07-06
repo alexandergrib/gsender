@@ -19,7 +19,7 @@ const Toggle = () => {
 
     return (
         <div className="flex items-center gap-2 dark:text-white">
-            {controllerType === 'grblHAL' && <span>4-Axis</span>}
+            {(controllerType === 'grblHAL' || controllerType === 'grbl') && <span>4-Axis</span>}
             <Switch
                 checked={mode === WORKSPACE_MODE.ROTARY}
                 onChange={handleToggle}
